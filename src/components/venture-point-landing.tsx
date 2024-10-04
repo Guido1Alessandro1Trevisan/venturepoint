@@ -8,7 +8,7 @@ import spaceImage from "@/components/ui/space.png"
 import { ChevronDown } from "lucide-react"
 
 export default function VenturePointLanding() {
-
+//ok
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F6F6F6] text-[#333333]">
