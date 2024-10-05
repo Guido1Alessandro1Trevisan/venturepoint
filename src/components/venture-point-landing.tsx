@@ -11,6 +11,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
+
+
 // Add this new component at the top of your file, outside the main component
 const SectionTitle = ({ title }: { title: string }) => (
   <div className="flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
@@ -109,8 +111,8 @@ export default function VenturePointLanding() {
       </header>
 
       <main className="flex-1 mt-24"> {/* Add mt-24 to account for fixed header */}
-        <section id="hero" className="w-full h-screen flex flex-col justify-center items-center relative bg-gray-100">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-16">
+        <section id="hero" className="w-full h-[90vh] flex flex-col justify-center items-center relative bg-gray-100">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight max-w-3xl mx-auto text-center">
               Empowering visionaries. Fueling innovation. Building the future.
             </h1>
@@ -118,7 +120,7 @@ export default function VenturePointLanding() {
               VenturePoint collaborates with bold innovators to build lasting enterprises that transcend industries and borders.
             </p>
           </div>
-          <div className="absolute bottom-12 animate-bounce">
+          <div className="absolute bottom-8 animate-bounce">
             <ChevronDown className="h-8 w-8 text-gray-400" />
           </div>
         </section>
@@ -132,10 +134,12 @@ export default function VenturePointLanding() {
                 { title: "Founder Partnership", description: "Our team collaborates closely with founders, providing strategic guidance, resources, and steadfast support. We believe in building strong, lasting relationships that go beyond capital investment, fostering a collaborative environment where visionaries can thrive." },
                 { title: "Global Perspective", description: "Leveraging our worldwide network, we empower companies to expand beyond borders and achieve new heights. Our global reach provides unique insights into diverse markets and cultures, enabling our portfolio companies to navigate international expansion with confidence." },
                 { title: "Tech-Driven Innovation", description: "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We're particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility." }
-              ].map((item, index) => (
+              ].map((item, index, array) => (
                 <div 
                   key={index} 
-                  className={`bg-white p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 mb-16 max-w-xl relative ${  // Changed mb-24 to mb-16
+                  className={`bg-gray-100 p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
+                    index === array.length - 1 ? 'mb-8' : 'mb-16'  // Reduced margin for the last card
+                  } max-w-xl relative ${
                     index % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
                   } approach-card`}
                 >
@@ -147,39 +151,34 @@ export default function VenturePointLanding() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="portfolio" className="w-full py-16 bg-white"> {/* Changed py-24 to py-16 */}
+        <AnimatedSection id="portfolio" className="w-full pt-8 pb-8 bg-white"> {/* Changed pb-16 to pb-8 */}
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Featured Companies" />
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
                 <div key={i} className="aspect-square bg-white p-6 flex items-center justify-center">
-                  <img
+                  <Image
                     alt={`Company ${i} logo`}
                     className="max-w-full max-h-full object-contain"
-                    height="80"
+                    height={80}
+                    width={80}
                     src={`/placeholder.svg?height=80&width=80&text=Logo+${i}`}
-                    style={{
-                      aspectRatio: "1/1",
-                      objectFit: "contain",
-                    }}
-                    width="80"
                   />
                 </div>
               ))}
             </div>
-            <div className="text-center mt-12">
-              <Button 
-                variant="default"
-                className="px-6 rounded-[4px] font-roboto"
+            <div className="text-center mt-8"> {/* Changed mt-12 to mt-8 */}
+              <button 
+                className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto"
               >
                 Explore Our Portfolio
                 <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              </button>
             </div>
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="leaders" className="w-full py-32 bg-white">
+        <AnimatedSection id="leaders" className="w-full py-24 bg-white"> {/* Changed py-32 to py-24 */}
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Leadership" />
             <div className="flex flex-col lg:flex-row gap-12">
@@ -199,15 +198,15 @@ export default function VenturePointLanding() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">MICHAEL'S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">MICHAEL&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert Michael's story here]
+                      [Insert Michael&apos;s story here]
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">RICH'S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">RICH&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert Rich's story here]
+                      [Insert Rich&apos;s story here]
                     </p>
                   </div>
                 </div>
@@ -239,7 +238,7 @@ export default function VenturePointLanding() {
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900">Get Started</h3>
-              <p className="text-sm">Ready to bring your vision to life? Let's connect and explore the possibilities together.</p>
+              <p className="text-sm">Ready to bring your vision to life? Let&apos;s connect and explore the possibilities together.</p>
               <Button variant="primary" size="lg" className="w-full">
                 Contact Us
               </Button>
