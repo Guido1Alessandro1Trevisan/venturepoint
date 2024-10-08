@@ -250,6 +250,8 @@ export default function VenturePointLanding() {
             </div>
           </div>
         </AnimatedSection>
+
+
       </main>
     </div>
     
