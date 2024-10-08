@@ -31,10 +31,11 @@ const companies = [
     backgroundColor: "#f19dc2",
   },
   {
-    name: "Casper Master",
-    url: "https://caspermaster.ai/",
-    logo: caspermasterLogo,
-    backgroundColor: "#d2d2d2",
+    name: "Easyfinetune",
+    url: "https://easyfinetune/",
+    logo: easyfinetuneLogo,
+    backgroundColor: "#ffffff",
+    border: "1px solid black",
   },
   {
     name: "UofCatalog",
@@ -46,12 +47,13 @@ const companies = [
     name: "Docusurfer",
     url: "",
     logo: docusurferLogo,
-    backgroundColor: "#d2d2d2",
+    backgroundColor: "#ffffff",
+    border: "1px solid black",
   },
   {
-    name: "Easyfinetune",
-    url: "https://easyfinetune/",
-    logo: easyfinetuneLogo,
+    name: "Casper Master",
+    url: "https://caspermaster.ai/",
+    logo: caspermasterLogo,
     backgroundColor: "#d2d2d2",
   },
 ];
@@ -215,7 +217,10 @@ export default function VenturePointLanding() {
                 >
                   <div
                     className="aspect-square p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
-                    style={{ backgroundColor: company.backgroundColor }}
+                    style={{ 
+                      backgroundColor: company.backgroundColor,
+                      border: company.border || 'none'
+                    }}
                   >
                     <div className="w-3/4 h-3/4 relative">
                       <Image
