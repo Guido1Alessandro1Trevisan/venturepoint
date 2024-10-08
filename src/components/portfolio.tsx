@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import readablyLogo from '@/public/readablylogo.png'
 import lynkrLogo from '@/public/lynkrlogo.png'
@@ -8,7 +10,7 @@ import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-export default function Component() {
+export function Portfolio() {
   const companies = [
     { name: 'Readably', logo: readablyLogo, founded: '2020', industry: 'Tech', description: 'Company 1 develops innovative AI solutions.' },
     { name: 'Lynkr', logo: lynkrLogo, founded: '2019', industry: 'Healthcare', description: 'Company 2 provides telemedicine services.' },
@@ -21,7 +23,7 @@ export default function Component() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Our Portfolio</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {companies.map((company, index) => (
           <Card key={index} className="overflow-hidden">
             <CardHeader className="p-0">
