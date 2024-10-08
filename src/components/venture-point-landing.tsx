@@ -13,6 +13,7 @@ import ParticlesComponent from "@/components/particles/particles";
 import readablyLogo from '@/public/readablylogo.png'
 import lynkrLogo from '@/public/lynkrlogo.png'
 import caspermasterLogo from '@/public/caspermasterlogo.png'
+import uofcatalogLogo from '@/public/uofcataloglogo.png'
 
 
 
@@ -174,7 +175,19 @@ export default function VenturePointLanding() {
                   </div>
                 </div>
               </Link>
-              {[4, 5, 6, 7, 8].map((i) => (
+              <Link href="https://uofcatalog.com/" target="_blank" rel="noopener noreferrer">
+                <div className="aspect-square bg-[#d2d2d2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+                  <div className="w-3/4 h-3/4 relative">
+                    <Image
+                      alt="UofC Catalog logo"
+                      className="object-contain"
+                      src={uofcatalogLogo}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Link>
+              {[5, 6, 7, 8].map((i) => (
                 <div key={i} className="aspect-square bg-white p-6 flex items-center justify-center">
                   <Image
                     alt={`Company ${i} logo`}
