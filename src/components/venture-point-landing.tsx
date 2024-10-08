@@ -224,7 +224,7 @@ export default function VenturePointLanding() {
               <div className="w-full lg:w-1/2">
                 <h3 className="text-3xl font-serif mb-6">Wired this way.</h3>
                 <p className="text-xl text-gray-600 font-roboto mb-8">
-                  Michael Loeb and Rich Vogel launch billion dollar businesses. As partners for over 30 years, Michael and Rich have honed their wisdom and intuition to identify impactful ideas and steer startups on a trajectory of profitability.
+                  Our journey into entrepreneurship and tech innovation began when we met in our freshman year of college while taking graduate-level math classes
                 </p>
                 <div className="space-y-6">
                   <div>
