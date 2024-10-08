@@ -228,9 +228,9 @@ export default function VenturePointLanding() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">GUIDOL'S STORY</h4>
-                    <p className="text-lg text-gray-600 font-roboto">
-                      [Insert GUIDO's story here]
+                    <h4 className="text-2xl font-serif mb-2">GUIDO'S STORY</h4>
+                    <p className="text-lg text-gray-600 font-roboto">  
+                      Guido, a mathematics major at the University of Chicago, has a broad academic background that includes PhD-level machine learning coursework and MBA studies at the Booth School of Business.
                     </p>
                   </div>
                   <div>
