@@ -14,6 +14,8 @@ import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
 import caspermasterLogo from "@/public/caspermasterlogo.png";
 import uofcatalogLogo from "@/public/uofcataloglogo.png";
+import docusurferLogo from '@/public/docusurferlogo.png'
+import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
 
 const companies = [
   {
@@ -38,6 +40,18 @@ const companies = [
     name: "UofCatalog",
     url: "https://uofcatalog.com/",
     logo: uofcatalogLogo,
+    backgroundColor: "#d2d2d2",
+  },
+  {
+    name: "Docusurfer",
+    url: "",
+    logo: docusurferLogo,
+    backgroundColor: "#d2d2d2",
+  },
+  {
+    name: "Easyfinetune",
+    url: "https://easyfinetune/",
+    logo: easyfinetuneLogo,
     backgroundColor: "#d2d2d2",
   },
 ];
@@ -93,6 +107,18 @@ const AnimatedSection = ({
   );
 };
 
+const DownArrow = () => (
+  <svg 
+    className="mx-auto w-8 h-16 my-4" 
+    viewBox="0 0 32 64" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M16 0 L16 60" stroke="#D1D5DB" strokeWidth="2"/>
+    <path d="M6 50 L16 60 L26 50" stroke="#D1D5DB" strokeWidth="2"/>
+  </svg>
+);
+
 export default function VenturePointLanding() {
   useEffect(() => {
     const handleScroll = (e: Event) => {
@@ -146,51 +172,35 @@ export default function VenturePointLanding() {
           </div>
         </section>
 
+        
         <AnimatedSection id="approach" className="w-full py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Our Approach" />
-            <div className="relative approach-cards">
+            <div className="flex flex-col items-center approach-cards">
               {[
-                {
-                  title: "Long-term Vision",
-                  description:
-                    "We invest in groundbreaking ideas with the power to transform industries and create enduring impact. Our focus extends beyond immediate gains, targeting innovations that promise sustained growth and societal benefits for decades to come.",
-                },
-                {
-                  title: "Founder Partnership",
-                  description:
-                    "Our team collaborates closely with founders, providing strategic guidance, resources, and steadfast support. We believe in building strong, lasting relationships that go beyond capital investment, fostering a collaborative environment where visionaries can thrive.",
-                },
-                {
-                  title: "Global Perspective",
-                  description:
-                    "Leveraging our worldwide network, we empower companies to expand beyond borders and achieve new heights. Our global reach provides unique insights into diverse markets and cultures, enabling our portfolio companies to navigate international expansion with confidence.",
-                },
-                {
-                  title: "Tech-Driven Innovation",
-                  description:
-                    "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We're particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility.",
-                },
+                { title: "Long-term Vision", description: "We invest in groundbreaking ideas that transform industries. Our focus extends beyond immediate gains, targeting innovations that leverage AI and personalization to create lasting impact and accelerate learning across various domains." },
+                { title: "Founder Partnership", description: "Our team collaborates closely with founders to streamline complex processes. We support solutions that turn hours of work into minutes, empowering users to efficiently manage events, connections, and organizational tasks." },
+                { title: "Global Perspective", description: "We empower companies to simplify information access on a global scale. Our investments focus on platforms that provide quick, accurate insights, reducing search time and delivering immediate answers to complex queries." }
               ].map((item, index, array) => (
-                <div
-                  key={index}
-                  className={`bg-gray-100 p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                    index === array.length - 1 ? "mb-8" : "mb-16"
-                  } max-w-xl relative ${
-                    index % 2 === 0 ? "ml-0 mr-auto" : "ml-auto mr-0"
-                  } approach-card`}
-                >
-                  <h3 className="text-2xl font-serif mb-4 text-gray-800">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-gray-600 font-roboto">
-                    {item.description}
-                  </p>
+                <div key={index} className="w-full max-w-2xl">
+                  <div 
+                    className="bg-gray-100 p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 mb-4 approach-card"
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold mr-4">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-2xl font-serif text-gray-800">{item.title}</h3>
+                    </div>
+                    <p className="text-xl text-gray-600 font-roboto">{item.description}</p>
+                  </div>
+                  {index < array.length - 1 && <DownArrow />}
                 </div>
               ))}
             </div>
           </div>
         </AnimatedSection>
+
 
         <AnimatedSection id="portfolio" className="w-full pt-8 pb-8 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
