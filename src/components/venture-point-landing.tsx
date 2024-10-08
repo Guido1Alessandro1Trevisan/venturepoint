@@ -113,7 +113,7 @@ export default function VenturePointLanding() {
                 { title: "Long-term Vision", description: "We invest in groundbreaking ideas with the power to transform industries and create enduring impact. Our focus extends beyond immediate gains, targeting innovations that promise sustained growth and societal benefits for decades to come." },
                 { title: "Founder Partnership", description: "Our team collaborates closely with founders, providing strategic guidance, resources, and steadfast support. We believe in building strong, lasting relationships that go beyond capital investment, fostering a collaborative environment where visionaries can thrive." },
                 { title: "Global Perspective", description: "Leveraging our worldwide network, we empower companies to expand beyond borders and achieve new heights. Our global reach provides unique insights into diverse markets and cultures, enabling our portfolio companies to navigate international expansion with confidence." },
-                { title: "Tech-Driven Innovation", description: "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We're particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility." }
+                { title: "Tech-Driven Innovation", description: "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We&apos;re particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility." }
               ].map((item, index, array) => (
                 <div 
                   key={index} 
@@ -228,15 +228,15 @@ export default function VenturePointLanding() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">GUIDO'S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">GUIDO&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">  
                       Guido, a Mathematics major at the University of Chicago, has a broad academic background that includes PhD-level machine learning coursework and MBA classes at the Booth School of Business.
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">CONRAD'S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">CONRAD&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                    Conrad, a dual Physics and Mathematics major at the University of Chicago, is conducting research on superconducting quantum processors at Fermilab's SQMS and ...
+                    Conrad, a dual Physics and Mathematics major at the University of Chicago, is conducting research on superconducting quantum processors at Fermilab&apos;s SQMS and ...
                     </p>
                   </div>
                 </div>
