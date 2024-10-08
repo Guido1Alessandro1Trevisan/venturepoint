@@ -10,6 +10,10 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import Link from "next/link";
 import ParticlesComponent from "@/components/particles/particles";
+import readablyLogo from '@/public/readablylogo.png'
+import lynkrLogo from '@/public/lynkrlogo.png'
+import caspermasterLogo from '@/public/caspermasterlogo.png'
+import uofcatalogLogo from '@/public/uofcataloglogo.png'
 
 
 
@@ -131,11 +135,59 @@ export default function VenturePointLanding() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="portfolio" className="w-full pt-8 pb-8 bg-white"> {/* Changed pb-16 to pb-8 */}
+        <AnimatedSection id="portfolio" className="w-full pt-8 pb-8 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Featured Companies" />
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Link href="https://readably.io/en" target="_blank" rel="noopener noreferrer">
+                <div className="aspect-square bg-[#262626] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+                  <div className="w-3/4 h-3/4 relative">
+                    <Image
+                      alt="Readably logo"
+                      className="object-contain"
+                      src={readablyLogo}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <Link href="https://apps.apple.com/us/app/lynkr-app/id6463145067" target="_blank" rel="noopener noreferrer">
+                <div className="aspect-square bg-[#f19dc2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+                  <div className="w-3/4 h-3/4 relative">
+                    <Image
+                      alt="Lynkr logo"
+                      className="object-contain"
+                      src={lynkrLogo}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <Link href="https://caspermaster.ai/" target="_blank" rel="noopener noreferrer">
+                <div className="aspect-square bg-[#d2d2d2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+                  <div className="w-3/4 h-3/4 relative">
+                    <Image
+                      alt="Casper Master logo"
+                      className="object-contain"
+                      src={caspermasterLogo}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <Link href="https://uofcatalog.com/" target="_blank" rel="noopener noreferrer">
+                <div className="aspect-square bg-[#d2d2d2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
+                  <div className="w-3/4 h-3/4 relative">
+                    <Image
+                      alt="UofC Catalog logo"
+                      className="object-contain"
+                      src={uofcatalogLogo}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Link>
+              {[5, 6, 7, 8].map((i) => (
                 <div key={i} className="aspect-square bg-white p-6 flex items-center justify-center">
                   <Image
                     alt={`Company ${i} logo`}
@@ -160,6 +212,7 @@ export default function VenturePointLanding() {
             </div>
           </div>
         </AnimatedSection>
+
 
         <AnimatedSection id="leaders" className="w-full py-24 bg-white"> {/* Changed py-32 to py-24 */}
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
