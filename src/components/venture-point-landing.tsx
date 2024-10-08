@@ -236,7 +236,7 @@ export default function VenturePointLanding() {
                   <div>
                     <h4 className="text-2xl font-serif mb-2">CONRAD&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                    Conrad, a dual Physics and Mathematics major at the University of Chicago, is conducting research on superconducting quantum processors at Fermilab&apos;s SQMS and ...
+                    Conrad, a dual Physics and Mathematics major at the University of Chicago, is conducting research on superconducting quantum processors at Fermilab&apos;s SQMS
                     </p>
                   </div>
                 </div>
