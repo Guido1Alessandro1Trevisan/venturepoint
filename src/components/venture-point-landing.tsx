@@ -1,28 +1,65 @@
 "use client";
 
-import { Button } from "@/components/ui/button"
-import { ChevronRight } from "lucide-react"
-import Image from "next/image"
-import { ChevronDown } from "lucide-react"
-import rich from '@/public/rich.png'
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
+import rich from "@/public/rich.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 import Link from "next/link";
 import ParticlesComponent from "@/components/particles/particles";
-import readablyLogo from '@/public/readablylogo.png'
-import lynkrLogo from '@/public/lynkrlogo.png'
-import caspermasterLogo from '@/public/caspermasterlogo.png'
-import uofcatalogLogo from '@/public/uofcataloglogo.png'
+import readablyLogo from "@/public/readablylogo.png";
+import lynkrLogo from "@/public/lynkrlogo.png";
+import caspermasterLogo from "@/public/caspermasterlogo.png";
+import uofcatalogLogo from "@/public/uofcataloglogo.png";
+
+const companies = [
+  {
+    name: "Readably",
+    url: "https://readably.io/en",
+    logo: readablyLogo,
+    backgroundColor: "#262626",
+  },
+  {
+    name: "Lynkr",
+    url: "https://apps.apple.com/us/app/lynkr-app/id6463145067",
+    logo: lynkrLogo,
+    backgroundColor: "#f19dc2",
+  },
+  {
+    name: "Casper Master",
+    url: "https://caspermaster.ai/",
+    logo: caspermasterLogo,
+    backgroundColor: "#d2d2d2",
+  },
+  {
+    name: "UofCatalog",
+    url: "https://uofcatalog.com/",
+    logo: uofcatalogLogo,
+    backgroundColor: "#d2d2d2",
+  },
+];
 
 const SectionTitle = ({ title }: { title: string }) => (
   <div className="flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-800 pr-6 sm:pr-8 whitespace-nowrap">{title}</h2>
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-800 pr-6 sm:pr-8 whitespace-nowrap">
+      {title}
+    </h2>
     <div className="flex-grow h-px bg-gray-300"></div>
   </div>
 );
 
-const AnimatedSection = ({ children, className, id }: { children: React.ReactNode, className?: string, id?: string }) => {
+const AnimatedSection = ({
+  children,
+  className,
+  id,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+}) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -31,7 +68,7 @@ const AnimatedSection = ({ children, className, id }: { children: React.ReactNod
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -42,11 +79,11 @@ const AnimatedSection = ({ children, className, id }: { children: React.ReactNod
       initial="hidden"
       variants={{
         visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 100 }
+        hidden: { opacity: 0, y: 100 },
       }}
-      transition={{ 
+      transition={{
         duration: 0.7,
-        ease: "easeOut"
+        ease: "easeOut",
       }}
       className={className}
       id={id}
@@ -61,25 +98,25 @@ export default function VenturePointLanding() {
     const handleScroll = (e: Event) => {
       e.preventDefault();
       const target = e.target as HTMLAnchorElement;
-      const id = target.getAttribute('href')?.slice(1);
+      const id = target.getAttribute("href")?.slice(1);
       if (id) {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       }
     };
 
     const links = document.querySelectorAll('nav a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', handleScroll);
+    links.forEach((link) => {
+      link.addEventListener("click", handleScroll);
     });
 
     return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleScroll);
+      links.forEach((link) => {
+        link.removeEventListener("click", handleScroll);
       });
     };
   }, []);
@@ -87,17 +124,21 @@ export default function VenturePointLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-[#333333]">
       <main className="flex-1">
-        <section id="hero" className="w-full h-screen flex flex-col justify-center items-center relative bg-gray-100 overflow-hidden">
+        <section
+          id="hero"
+          className="w-full h-screen flex flex-col justify-center items-center relative bg-gray-100 overflow-hidden"
+        >
           <div className="absolute top-0">
             <ParticlesComponent />
           </div>
-          
+
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight max-w-3xl mx-auto text-center">
               Empowering visionaries. Fueling innovation. Building the future.
             </h1>
             <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto text-center font-normal">
-              VenturePoint is a University of Chicago venture studio that enables non-technical undergraduates to scale their startups.
+              VenturePoint is a University of Chicago venture studio that
+              enables non-technical undergraduates to scale their startups.
             </p>
           </div>
           <div className="absolute bottom-8 animate-bounce z-10">
@@ -110,21 +151,41 @@ export default function VenturePointLanding() {
             <SectionTitle title="Our Approach" />
             <div className="relative approach-cards">
               {[
-                { title: "Long-term Vision", description: "We invest in groundbreaking ideas with the power to transform industries and create enduring impact. Our focus extends beyond immediate gains, targeting innovations that promise sustained growth and societal benefits for decades to come." },
-                { title: "Founder Partnership", description: "Our team collaborates closely with founders, providing strategic guidance, resources, and steadfast support. We believe in building strong, lasting relationships that go beyond capital investment, fostering a collaborative environment where visionaries can thrive." },
-                { title: "Global Perspective", description: "Leveraging our worldwide network, we empower companies to expand beyond borders and achieve new heights. Our global reach provides unique insights into diverse markets and cultures, enabling our portfolio companies to navigate international expansion with confidence." },
-                { title: "Tech-Driven Innovation", description: "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We&apos;re particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility." }
+                {
+                  title: "Long-term Vision",
+                  description:
+                    "We invest in groundbreaking ideas with the power to transform industries and create enduring impact. Our focus extends beyond immediate gains, targeting innovations that promise sustained growth and societal benefits for decades to come.",
+                },
+                {
+                  title: "Founder Partnership",
+                  description:
+                    "Our team collaborates closely with founders, providing strategic guidance, resources, and steadfast support. We believe in building strong, lasting relationships that go beyond capital investment, fostering a collaborative environment where visionaries can thrive.",
+                },
+                {
+                  title: "Global Perspective",
+                  description:
+                    "Leveraging our worldwide network, we empower companies to expand beyond borders and achieve new heights. Our global reach provides unique insights into diverse markets and cultures, enabling our portfolio companies to navigate international expansion with confidence.",
+                },
+                {
+                  title: "Tech-Driven Innovation",
+                  description:
+                    "Our investments target cutting-edge technologies that have the potential to reshape entire industries. We're particularly interested in AI, blockchain, biotech, and clean energy solutions that address global challenges and open new frontiers of possibility.",
+                },
               ].map((item, index, array) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`bg-gray-100 p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                    index === array.length - 1 ? 'mb-8' : 'mb-16'
+                    index === array.length - 1 ? "mb-8" : "mb-16"
                   } max-w-xl relative ${
-                    index % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
+                    index % 2 === 0 ? "ml-0 mr-auto" : "ml-auto mr-0"
                   } approach-card`}
                 >
-                  <h3 className="text-2xl font-serif mb-4 text-gray-800">{item.title}</h3>
-                  <p className="text-base text-gray-600 font-roboto">{item.description}</p>
+                  <h3 className="text-2xl font-serif mb-4 text-gray-800">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-gray-600 font-roboto">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -135,71 +196,32 @@ export default function VenturePointLanding() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Featured Companies" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="https://readably.io/en" target="_blank" rel="noopener noreferrer">
-                <div className="aspect-square bg-[#262626] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
-                  <div className="w-3/4 h-3/4 relative">
-                    <Image
-                      alt="Readably logo"
-                      className="object-contain"
-                      src={readablyLogo}
-                      layout="fill"
-                    />
+              {companies.map((company, index) => (
+                <Link
+                  key={index}
+                  href={company.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className="aspect-square p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105"
+                    style={{ backgroundColor: company.backgroundColor }}
+                  >
+                    <div className="w-3/4 h-3/4 relative">
+                      <Image
+                        alt={`${company.name} logo`}
+                        className="object-contain"
+                        src={company.logo}
+                        layout="fill"
+                      />
+                    </div>
                   </div>
-                </div>
-              </Link>
-              <Link href="https://apps.apple.com/us/app/lynkr-app/id6463145067" target="_blank" rel="noopener noreferrer">
-                <div className="aspect-square bg-[#f19dc2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
-                  <div className="w-3/4 h-3/4 relative">
-                    <Image
-                      alt="Lynkr logo"
-                      className="object-contain"
-                      src={lynkrLogo}
-                      layout="fill"
-                    />
-                  </div>
-                </div>
-              </Link>
-              <Link href="https://caspermaster.ai/" target="_blank" rel="noopener noreferrer">
-                <div className="aspect-square bg-[#d2d2d2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
-                  <div className="w-3/4 h-3/4 relative">
-                    <Image
-                      alt="Casper Master logo"
-                      className="object-contain"
-                      src={caspermasterLogo}
-                      layout="fill"
-                    />
-                  </div>
-                </div>
-              </Link>
-              <Link href="https://uofcatalog.com/" target="_blank" rel="noopener noreferrer">
-                <div className="aspect-square bg-[#d2d2d2] p-6 flex items-center justify-center cursor-pointer transition-transform hover:scale-105">
-                  <div className="w-3/4 h-3/4 relative">
-                    <Image
-                      alt="UofC Catalog logo"
-                      className="object-contain"
-                      src={uofcatalogLogo}
-                      layout="fill"
-                    />
-                  </div>
-                </div>
-              </Link>
-              {[5, 6, 7, 8].map((i) => (
-                <div key={i} className="aspect-square bg-white p-6 flex items-center justify-center">
-                  <Image
-                    alt={`Company ${i} logo`}
-                    className="max-w-full max-h-full object-contain"
-                    height={80}
-                    width={80}
-                    src={`/placeholder.svg?height=80&width=80&text=Logo+${i}`}
-                  />
-                </div>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-8">
               <Link href={"/portfolio"}>
-                <button 
-                  className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto"
-                >
+                <button className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto">
                   Explore Our Portfolio
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </button>
@@ -212,10 +234,13 @@ export default function VenturePointLanding() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Leadership" />
             <div className="flex flex-col lg:flex-row gap-12">
-              <div className="w-full lg:w-1/2 relative" style={{ minHeight: '600px', height: 'auto' }}>
-                <Image 
+              <div
+                className="w-full lg:w-1/2 relative"
+                style={{ minHeight: "600px", height: "auto" }}
+              >
+                <Image
                   src={rich}
-                  alt="Michael Loeb and Rich Vogel" 
+                  alt="Michael Loeb and Rich Vogel"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg shadow-lg"
@@ -224,19 +249,28 @@ export default function VenturePointLanding() {
               <div className="w-full lg:w-1/2">
                 <h3 className="text-3xl font-serif mb-6">Wired this way.</h3>
                 <p className="text-xl text-gray-600 font-roboto mb-8">
-                  Our journey into entrepreneurship and tech innovation began when we met in our freshman year of college while taking graduate-level math classes
+                  Our journey into entrepreneurship and tech innovation began
+                  when we met in our freshman year of college while taking
+                  graduate-level math classes
                 </p>
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-2xl font-serif mb-2">GUIDO&apos;S STORY</h4>
-                    <p className="text-lg text-gray-600 font-roboto">  
-                      Guido, a Mathematics major at the University of Chicago, has a broad academic background that includes PhD-level machine learning coursework and MBA classes at the Booth School of Business.
+                    <p className="text-lg text-gray-600 font-roboto">
+                      Guido, a Mathematics major at the University of Chicago,
+                      has a broad academic background that includes PhD-level
+                      machine learning coursework and MBA classes at the Booth
+                      School of Business.
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">CONRAD&apos;S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">
+                      CONRAD&apos;S STORY
+                    </h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                    Conrad, a dual Physics and Mathematics major at the University of Chicago, is conducting research on superconducting quantum processors at Fermilab&apos;s SQMS
+                      Conrad, a dual Physics and Mathematics major at the
+                      University of Chicago, is conducting research on
+                      superconducting quantum processors at Fermilab&apos;s SQMS
                     </p>
                   </div>
                 </div>
@@ -244,9 +278,7 @@ export default function VenturePointLanding() {
             </div>
           </div>
         </AnimatedSection>
-
-
       </main>
     </div>
-  )
+  );
 }
