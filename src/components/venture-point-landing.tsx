@@ -9,6 +9,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import Link from "next/link";
+import ParticlesComponent from "@/components/particles/particles";
+
 
 
 
@@ -85,9 +87,12 @@ export default function VenturePointLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-[#333333]">
 
-      <main className="flex-1 mt-24"> {/* Add mt-24 to account for fixed header */}
-        <section id="hero" className="w-full h-[90vh] flex flex-col justify-center items-center relative bg-gray-100">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <main className="flex-1 mt-24"> 
+        <section id="hero" className="w-full h-[90vh] flex flex-col justify-center items-center relative bg-gray-100 re">
+  
+          <ParticlesComponent />
+     
+          <div className="absolute mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight max-w-3xl mx-auto text-center">
               Empowering visionaries. Fueling innovation. Building the future.
             </h1>
@@ -194,5 +199,6 @@ export default function VenturePointLanding() {
         </AnimatedSection>
       </main>
     </div>
+    
   )
 }
