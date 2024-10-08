@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import spaceImage from "@/components/ui/space.png"
 import { ChevronDown } from "lucide-react"
-import rich from '@/components/ui/rich.jpg'
+import rich from '@/components/ui/rich.png'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
