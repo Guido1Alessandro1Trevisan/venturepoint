@@ -15,10 +15,6 @@ import lynkrLogo from '@/public/lynkrlogo.png'
 import caspermasterLogo from '@/public/caspermasterlogo.png'
 import uofcatalogLogo from '@/public/uofcataloglogo.png'
 
-
-
-
-// Add this new component at the top of your file, outside the main component
 const SectionTitle = ({ title }: { title: string }) => (
   <div className="flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-800 pr-6 sm:pr-8 whitespace-nowrap">{title}</h2>
@@ -53,7 +49,7 @@ const AnimatedSection = ({ children, className, id }: { children: React.ReactNod
         ease: "easeOut"
       }}
       className={className}
-      id={id}  // Add this line
+      id={id}
     >
       {children}
     </motion.section>
@@ -90,26 +86,26 @@ export default function VenturePointLanding() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-[#333333]">
-
-      <main className="flex-1 mt-24"> 
-        <section id="hero" className="w-full h-[90vh] flex flex-col justify-center items-center relative bg-gray-100 re">
-  
-          <ParticlesComponent />
-     
-          <div className="absolute mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <main className="flex-1">
+        <section id="hero" className="w-full h-screen flex flex-col justify-center items-center relative bg-gray-100 overflow-hidden">
+          <div className="absolute top-0">
+            <ParticlesComponent />
+          </div>
+          
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight max-w-3xl mx-auto text-center">
               Empowering visionaries. Fueling innovation. Building the future.
             </h1>
             <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto text-center font-normal">
-              VenturePoint is a University of Chicago venture studio enables non-technical undergraduates to scale their startups.
+              VenturePoint is a University of Chicago venture studio that enables non-technical undergraduates to scale their startups.
             </p>
           </div>
-          <div className="absolute bottom-8 animate-bounce">
+          <div className="absolute bottom-8 animate-bounce z-10">
             <ChevronDown className="h-8 w-8 text-gray-400" />
           </div>
         </section>
 
-        <AnimatedSection id="approach" className="w-full py-20 bg-white"> {/* Changed py-40 to py-20 */}
+        <AnimatedSection id="approach" className="w-full py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Our Approach" />
             <div className="relative approach-cards">
@@ -122,7 +118,7 @@ export default function VenturePointLanding() {
                 <div 
                   key={index} 
                   className={`bg-gray-100 p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                    index === array.length - 1 ? 'mb-8' : 'mb-16'  // Reduced margin for the last card
+                    index === array.length - 1 ? 'mb-8' : 'mb-16'
                   } max-w-xl relative ${
                     index % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
                   } approach-card`}
@@ -199,9 +195,8 @@ export default function VenturePointLanding() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8"> {/* Changed mt-12 to mt-8 */}
-              <Link
-                href={"/portfolio"}>
+            <div className="text-center mt-8">
+              <Link href={"/portfolio"}>
                 <button 
                   className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto"
                 >
@@ -213,8 +208,7 @@ export default function VenturePointLanding() {
           </div>
         </AnimatedSection>
 
-
-        <AnimatedSection id="leaders" className="w-full py-24 bg-white"> {/* Changed py-32 to py-24 */}
+        <AnimatedSection id="leaders" className="w-full py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Leadership" />
             <div className="flex flex-col lg:flex-row gap-12">
@@ -234,15 +228,15 @@ export default function VenturePointLanding() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">GUIDOL&apos;S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">GUIDOL'S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert GUIDO&apos;s story here]
+                      [Insert GUIDO's story here]
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">CONRAD&apos;S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">CONRAD'S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert CONRAD&apos;s story here]
+                      [Insert CONRAD's story here]
                     </p>
                   </div>
                 </div>
@@ -252,6 +246,5 @@ export default function VenturePointLanding() {
         </AnimatedSection>
       </main>
     </div>
-    
   )
 }

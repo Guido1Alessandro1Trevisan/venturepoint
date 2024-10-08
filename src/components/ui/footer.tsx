@@ -7,7 +7,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="connect" className="bg-gray-100 text-gray-600 py-12">
+    <footer id="connect" className="bg-gray-100 text-gray-600 py-12 z-10 absolute w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
