@@ -2,14 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
-import spaceImage from "@/components/ui/space.png"
 import { ChevronDown } from "lucide-react"
-import rich from '@/components/ui/rich.png'
+import rich from '@/public/rich.png'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
+import Link from "next/link";
 
 
 
@@ -85,30 +84,6 @@ export default function VenturePointLanding() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-[#333333]">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gray-100 border-b border-gray-200">
-        <div className="container mx-auto px-4 lg:px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center">
-            <Image src={spaceImage} alt="Space" width={40} height={40} className="mr-3" />
-            <Link className="text-3xl font-serif" href="#">
-              VenturePoint
-            </Link>
-          </div>
-          <nav className="flex gap-10">
-            <a href="#portfolio" className="text-lg font-medium hover:underline underline-offset-4">
-              Portfolio
-            </a>
-            <a href="#leaders" className="text-lg font-medium hover:underline underline-offset-4">
-              Leaders
-            </a>
-            <a href="#approach" className="text-lg font-medium hover:underline underline-offset-4">
-              Approach
-            </a>
-            <a href="#connect" className="text-lg font-medium hover:underline underline-offset-4">
-              Connect
-            </a>
-          </nav>
-        </div>
-      </header>
 
       <main className="flex-1 mt-24"> {/* Add mt-24 to account for fixed header */}
         <section id="hero" className="w-full h-[90vh] flex flex-col justify-center items-center relative bg-gray-100">
@@ -117,7 +92,7 @@ export default function VenturePointLanding() {
               Empowering visionaries. Fueling innovation. Building the future.
             </h1>
             <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto text-center font-normal">
-              VenturePoint collaborates with bold innovators to build lasting enterprises that transcend industries and borders.
+              VenturePoint is a University of Chicago venture studio enables non-technical undergraduates to scale their startups.
             </p>
           </div>
           <div className="absolute bottom-8 animate-bounce">
@@ -168,12 +143,15 @@ export default function VenturePointLanding() {
               ))}
             </div>
             <div className="text-center mt-8"> {/* Changed mt-12 to mt-8 */}
-              <button 
-                className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto"
-              >
-                Explore Our Portfolio
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </button>
+              <Link
+                href={"/portfolio"}>
+                <button 
+                  className="px-6 py-2 rounded-[4px] font-roboto bg-black text-white hover:bg-gray-800 transition-colors duration-300 shadow-sm flex items-center justify-center mx-auto"
+                >
+                  Explore Our Portfolio
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </button>
+              </Link>
             </div>
           </div>
         </AnimatedSection>
@@ -198,15 +176,15 @@ export default function VenturePointLanding() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">MICHAEL&apos;S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">GUIDOL&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert Michael&apos;s story here]
+                      [Insert GUIDO&apos;s story here]
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif mb-2">RICH&apos;S STORY</h4>
+                    <h4 className="text-2xl font-serif mb-2">CONRAD&apos;S STORY</h4>
                     <p className="text-lg text-gray-600 font-roboto">
-                      [Insert Rich&apos;s story here]
+                      [Insert CONRAD&apos;s story here]
                     </p>
                   </div>
                 </div>
@@ -215,44 +193,6 @@ export default function VenturePointLanding() {
           </div>
         </AnimatedSection>
       </main>
-
-      <footer id="connect" className="bg-gray-100 text-gray-600 py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">About Us</h3>
-              <p className="text-sm">VenturePoint is a leading venture capital firm empowering visionaries and fueling innovation to build the future.</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-sm hover:text-gray-900">Portfolio</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Leaders</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Insights</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Connect</a></li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">Contact</h3>
-              <p className="text-sm">123 Innovation Street<br />Tech City, TC 12345<br />contact@venturepoint.com</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">Get Started</h3>
-              <p className="text-sm">Ready to bring your vision to life? Let&apos;s connect and explore the possibilities together.</p>
-              <Button variant="primary" size="lg" className="w-full">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-          <div className="mt-8">
-
-            {/* Add your contact information or form here */}
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-            <p className="text-sm">&copy; 2024 VenturePoint. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
