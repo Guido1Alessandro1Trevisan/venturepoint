@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
-import caspermasterLogo from "@/public/caspermasterlogo.png";
+import caspermasterLogo from "@/public/caspermasterlogo.svg";
 import uofcatalogLogo from "@/public/uofcataloglogo.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
 import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
@@ -86,7 +86,7 @@ export function PortfolioComponent() {
 
   const getHeaderClass = (title: string) => {
     if (title === "Caspermaster") {
-      return "bg-[#d2d2d2]";
+      return "bg-[#fbfcfb]";
     }
     return "";
   };

@@ -13,7 +13,7 @@ import AboutDropdown from "./story";
 import ParticlesComponent from "@/components/particles/particles";
 import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
-import caspermasterLogo from "@/public/caspermasterlogo.png";
+import caspermasterLogo from "@/public/caspermasterlogo.svg";
 import uofcatalogLogo from "@/public/uofcataloglogo.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
 import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
@@ -55,7 +55,8 @@ const companies = [
     name: "Casper Master",
     url: "https://caspermaster.ai/",
     logo: caspermasterLogo,
-    backgroundColor: "#d2d2d2",
+    backgroundColor: "#fbfcfb",
+    
   },
 ];
 
