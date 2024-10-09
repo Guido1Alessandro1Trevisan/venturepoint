@@ -42,7 +42,7 @@ export default function AboutDropdown() {
                 width={30}
               />
             </button>
-            ABOUT GUIDO
+            Meet Guido
             <a
               href="#"
               target="_blank"
@@ -63,7 +63,7 @@ export default function AboutDropdown() {
       <AccordionItem value="conrad">
         <AccordionTrigger className="text-2xl font-serif">
           <div className="flex items-center justify-between w-full relative">
-            ABOUT CONRAD
+            Meet Conrad
             <button onClick={handleConradLinkedin} className="absolute ml-52">
               <Image
                 alt={`Conrad Linkedin`}
