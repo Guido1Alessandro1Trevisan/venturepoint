@@ -7,7 +7,7 @@ import harvardLogo from "@/public/institutions/harvard.png"
 import imsaLogo from "@/public/institutions/imsa.png"
 import uchicagolawLogo from "@/public/institutions/uchicago-law.png"
 import uchicagolangaugeLogo from "@/public/institutions/uchicago-language.png"
-import uchicagofontLogo from "@/public/institutions/uchicago-language.png"
+import uchicagofontLogo from "@/public/institutions/uchicagofont.svg"
 import ucl from "@/public/institutions/ucl.png"
 
 
