@@ -38,8 +38,10 @@ export default function ScrollingLogos({ logos = sampleLogos }: { logos?: Logo[]
     let scrollAmount
     if (window.innerWidth <= 768) {
       scrollAmount = 1.5
+    } else {
+      scrollAmount = 0.5
     }
-    scrollAmount = 0.5
+   
 
     let position = 0
     const scroll = () => {
