@@ -9,6 +9,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
+import AboutDropdown from "./story";
 import ParticlesComponent from "@/components/particles/particles";
 import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
@@ -269,26 +270,8 @@ export default function VenturePointLanding() {
                   when we met in our freshman year of college while taking
                   graduate-level math classes
                 </p>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-2xl font-serif mb-2">GUIDO&apos;S STORY</h4>
-                    <p className="text-lg text-gray-600 font-roboto">
-                      Guido, a Mathematics major at the University of Chicago,
-                      has a broad academic background that includes PhD-level
-                      machine learning coursework and MBA classes at the Booth
-                      School of Business.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-serif mb-2">
-                      CONRAD&apos;S STORY
-                    </h4>
-                    <p className="text-lg text-gray-600 font-roboto">
-                      Conrad, a dual Physics and Mathematics major at the
-                      University of Chicago, is conducting research on
-                      superconducting quantum processors at Fermilab&apos;s SQMS
-                    </p>
-                  </div>
+                <div className="space-y-6 ">
+                  <AboutDropdown/>
                 </div>
               </div>
             </div>
