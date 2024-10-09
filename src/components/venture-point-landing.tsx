@@ -58,7 +58,8 @@ const companies = [
   },
 ];
 
-const SectionTitle = ({ title }: { title: string }) => (
+// Add this new component definition and export it
+export const SectionTitle = ({ title }: { title: string }) => (
   <div className="flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-gray-800 pr-6 sm:pr-8 whitespace-nowrap">
       {title}
