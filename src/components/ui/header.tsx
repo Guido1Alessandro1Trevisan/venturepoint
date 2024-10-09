@@ -17,7 +17,7 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-gray-100 border-b border-gray-200">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-gray-100 border-b border-gray-200 font-serif">
             <div className="container mx-auto px-4 lg:px-6 h-16 md:h-24 flex items-center justify-between">
                 <div className="flex items-center">
                     <Image src={spaceImage} alt="Space" width={32} height={32} className="mr-2 md:mr-3" />

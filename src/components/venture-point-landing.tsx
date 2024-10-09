@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import ScrollingLogos from "./ui/scrolling-logos";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
@@ -175,6 +175,10 @@ export default function VenturePointLanding() {
             <ChevronDown className="h-8 w-8 text-gray-400" />
           </div>
         </section>
+
+        <div className="flex flex-col items-center justify-center z-10 ">
+          <ScrollingLogos />
+        </div>
 
         
         <AnimatedSection id="approach" className="w-full py-20 bg-white">

@@ -8,6 +8,7 @@ export default function Page() {
         <section className="w-full py-12 md:py-24 lg:py-32">
         <Header/>
           <PortfolioComponent />
+          
         </section>
       </main>
     </div>
