@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import cornellLogo from "@/public/institutions/cornell.png"
@@ -7,6 +9,7 @@ import uchicagolawLogo from "@/public/institutions/uchicago-law.png"
 import uchicagolangaugeLogo from "@/public/institutions/uchicago-language.png"
 import uchicagofontLogo from "@/public/institutions/uchicagofont.svg"
 import ucl from "@/public/institutions/ucl.png"
+
 
 type Logo = {
   src: any
@@ -26,28 +29,17 @@ const sampleLogos: Logo[] = [
 export default function ScrollingLogos({ logos = sampleLogos }: { logos?: Logo[] }) {
   const scrollerRef = useRef<HTMLDivElement>(null)
   const [start, setStart] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    // Check on initial load
-    handleResize()
-
-    // Listen to window resize events
-    window.addEventListener('resize', handleResize)
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  useEffect(() => {
-    if (!isMobile || !scrollerRef.current) return
+    if (!scrollerRef.current) return
 
     const scrollerContent = scrollerRef.current
     const scrollerContentWidth = scrollerContent.scrollWidth
-    const scrollAmount = 1.5 // Adjust for faster/slower scrolling
+    let scrollAmount
+    if (window.innerWidth <= 768) {
+      scrollAmount = 1.5
+    }
+    scrollAmount = 0.5
 
     let position = 0
     const scroll = () => {
@@ -63,7 +55,7 @@ export default function ScrollingLogos({ logos = sampleLogos }: { logos?: Logo[]
     requestAnimationFrame(scroll)
 
     return () => cancelAnimationFrame(requestAnimationFrame(scroll))
-  }, [isMobile])
+  }, [])
 
   return (
     <div className="w-full overflow-hidden bg-muted py-6 mt-10">
