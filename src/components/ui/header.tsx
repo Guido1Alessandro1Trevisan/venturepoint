@@ -21,7 +21,7 @@ export default function Header() {
             <div className="container mx-auto px-4 lg:px-6 h-16 md:h-24 flex items-center justify-between">
                 <div className="flex items-center">
                     <Image src={spaceImage} alt="Space" width={32} height={32} className="mr-2 md:mr-3" />
-                    <Link href="#">
+                    <Link href="#" className="text-lg md:text-xl lg:text-2xl">
                         VenturePoint
                     </Link>
                 </div>
