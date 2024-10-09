@@ -33,7 +33,7 @@ const companies = [
   },
   {
     name: "Easyfinetune",
-    url: "https://easyfinetune/",
+    url: "https://easyfinetune.com",
     logo: easyfinetuneLogo,
     backgroundColor: "#ffffff",
     border: "1px solid black",
