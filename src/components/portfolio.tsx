@@ -20,7 +20,8 @@ const portfolioItems = [
     image: readablyLogo,
     link: "https://readably.io/en",
     founded: "2020",
-    industry: "AI & Education"
+    industry: "AI & Education",
+    showLink: true
   },
   {
     title: "Lynkr",
@@ -28,7 +29,8 @@ const portfolioItems = [
     image: lynkrLogo,
     link: "https://apps.apple.com/us/app/lynkr-app/id6463145067",
     founded: "2023",
-    industry: "Social Networking"
+    industry: "Social Networking",
+    showLink: true
   },
   {
     title: "uofcatalog",
@@ -36,7 +38,8 @@ const portfolioItems = [
     image: uofcatalogLogo,
     link: "https://uofcatalog.com/",
     founded: "2022",
-    industry: "Education Technology"
+    industry: "Education Technology",
+    showLink: true
   },
   {
     title: "Easyfinetune",
@@ -44,7 +47,8 @@ const portfolioItems = [
     image: easyfinetuneLogo,
     link: "https://easyfinetune.com/",
     founded: "2023",
-    industry: "AI & Data"
+    industry: "AI & Data",
+    showLink: true
   },
   {
     title: "Caspermaster",
@@ -52,15 +56,17 @@ const portfolioItems = [
     image: caspermasterLogo,
     link: "https://caspermaster.ai/",
     founded: "2023",
-    industry: "Education Technology"
+    industry: "Education Technology",
+    showLink: true
   },
   {
     title: "Docusurfer",
     description: "Navigating residential lease contracts can be overwhelming, especially when dealing with complex legal jargon. Docusurfer makes it easy by analyzing your lease agreements to identify unenforceable and predatory clauses. Fine tuned with the expertise of the University of Chicago Law School and legal expertise, Docusurfer scans contracts to flag unfair terms, helping tenants make informed decisions before signing. Whether you're renting for the first time or renewing a lease, Docusurfer provides valuable insights to protect your rights.",
     image: docusurferLogo,
-    link: "https://docusurfer.com/",
+    link: "",
     founded: "2023",
-    industry: "Legal Tech"
+    industry: "Legal Tech",
+    showLink: false // Hide "Visit Website" button
   }
 ]
 
@@ -89,20 +95,22 @@ export function PortfolioComponent() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {portfolioItems.map((item, index) => (
         <Card key={index} className="overflow-hidden bg-white shadow-lg relative">
-          <Link 
-            href={item.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="absolute top-2 right-2 z-10"
-          >
-            <Button 
-              variant="outline" 
-              className="flex items-center bg-white hover:bg-gray-200 transition-colors duration-200"
+          {item.showLink && (
+            <Link 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute top-2 right-2 z-10"
             >
-              Visit Website
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+              <Button 
+                variant="outline" 
+                className="flex items-center bg-white hover:bg-gray-200 transition-colors duration-200"
+              >
+                Visit Website
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          )}
           <CardHeader className={`p-0 relative h-64 ${getHeaderClass(item.title)}`}>
             <Image
               src={item.image}

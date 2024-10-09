@@ -186,9 +186,18 @@ export default function VenturePointLanding() {
             <SectionTitle title="Our Approach" />
             <div className="flex flex-col items-center approach-cards">
               {[
-                { title: "Long-term Thinking", description: "We're interested in new ideas that could make big changes in different fields. We like to look at how things might develop over time, not just what's happening right now." },
-                { title: "Working with Founders", description: "We try to team up with people who start new companies. Our goal is to help make complicated things simpler." },
-                { title: "Worldwide View", description: "We want to support companies that help people find information more easily, no matter where they are in the world." }
+                { 
+                  "title": "Speed and Foundation", 
+                  "description": "We work on innovative tech ideas and rapidly validate them through guerrilla marketing and in-depth vertical analytics to ensure a strong foundation for future growth." 
+                },
+                { 
+                  "title": "Product Lead", 
+                  "description": "We take a small equity stake  and collaborate with non-technical founders from prestigious universities like UChicago, Harvard, Cornell, and UCL where we take on the role of product lead." 
+                },
+                { 
+                  "title": "Corporate Support", 
+                  "description": "We  partner with leading corporations and top institutions to gain valuable market insights and accelerate our growth trajectory." 
+                }
               ].map((item, index, array) => (
                 <div key={index} className="w-full max-w-2xl">
                   <div 
