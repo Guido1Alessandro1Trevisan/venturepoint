@@ -54,7 +54,7 @@ export default function AboutDropdown() {
         </AccordionTrigger>
         <AccordionContent>
           <p className="text-lg text-gray-600 font-roboto">
-            Guido is a Mathematics major at the University of Chicago withbroad
+            Guido is a Mathematics major at the University of Chicago with a broad
             academic background that includes PhD-level machine learning coursework
             and MBA classes at the Booth School of Business.
           </p>
