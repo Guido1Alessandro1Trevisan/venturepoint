@@ -14,7 +14,7 @@ import ParticlesComponent from "@/components/particles/particles";
 import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
 import caspermasterLogo from "@/public/caspermasterlogo.svg";
-import uofcatalogLogo from "@/public/uofcataloglogo.png";
+import uchicagogenie from "@/public/uchicagogenie.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
 import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
 
@@ -39,9 +39,9 @@ const companies = [
     border: "1px solid black",
   },
   {
-    name: "UofCatalog",
-    url: "https://uofcatalog.com/",
-    logo: uofcatalogLogo,
+    name: "UChicagogenie",
+    url: "https://uchicagogenie.com/",
+    logo: uchicagogenie,
     backgroundColor: "#d2d2d2",
   },
   {

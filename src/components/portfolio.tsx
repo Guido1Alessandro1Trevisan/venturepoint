@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import readablyLogo from "@/public/readablylogo.png";
 import lynkrLogo from "@/public/lynkrlogo.png";
 import caspermasterLogo from "@/public/caspermasterlogo.svg";
-import uofcatalogLogo from "@/public/uofcataloglogo.png";
+import uchicagogenie from "@/public/uchicagogenie.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
 import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
 
@@ -33,10 +33,10 @@ const portfolioItems = [
     showLink: true
   },
   {
-    title: "uofcatalog",
-    description: "Navigating academic options can be overwhelming, but uofcatalog streamlines the process by providing quick, accurate insights into the University of Chicago's academic offerings. Powered by RAG and GPT-4o, UofCatalog reduces time spent searching for information by delivering immediate answers about degree paths, core curriculum, and course requirements.",
-    image: uofcatalogLogo,
-    link: "https://uofcatalog.com/",
+    title: "uchicagogenie",
+    description: "UChicago Genie is your personal companion ready to answer questions about professor and course feedback, core curriculum, majors, degree paths, course requirements, content, and schedules for undergraduate classes with no hallucinations—at most, it may be unhelpful.",
+    image: uchicagogenie,
+    link: "https://uchicagogenie.com/",
     founded: "2022",
     industry: "Education Technology",
     showLink: true
