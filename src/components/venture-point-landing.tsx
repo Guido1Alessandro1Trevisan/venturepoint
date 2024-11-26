@@ -42,7 +42,7 @@ const companies = [
     name: "UChicagogenie",
     url: "https://uchicagogenie.com/",
     logo: uchicagogenie,
-    backgroundColor: "#d2d2d2",
+    backgroundColor: "#800000",
   },
   {
     name: "Docusurfer",

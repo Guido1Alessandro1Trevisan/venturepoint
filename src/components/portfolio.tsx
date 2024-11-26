@@ -34,7 +34,7 @@ const portfolioItems = [
   },
   {
     title: "uchicagogenie",
-    description: "UChicago Genie is your personal companion ready to answer questions about professor and course feedback, core curriculum, majors, degree paths, course requirements, content, and schedules for undergraduate classes with no hallucinations—at most, it may be unhelpful.",
+    description: "With over 10,000 queries in just 7 days and 1.8k unique undergraduate visitors, UChicago Genie is your personal companion, ready to answer questions about professors and course feedback, the core curriculum, majors, degree paths, course requirements, content, and schedules for undergraduate classes—without any hallucinations. At most, it may only be unhelpful.",
     image: uchicagogenie,
     link: "https://uchicagogenie.com/",
     founded: "2022",
