@@ -16,7 +16,7 @@ import lynkrLogo from "@/public/lynkrlogo.png";
 import caspermasterLogo from "@/public/caspermasterlogo.svg";
 import uchicagogenie from "@/public/uchicagogenie.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
-import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
+import prind from '@/public/prind.png'
 
 const companies = [
   {
@@ -32,11 +32,11 @@ const companies = [
     backgroundColor: "#f19dc2",
   },
   {
-    name: "Easyfinetune",
-    url: "https://easyfinetune.com",
-    logo: easyfinetuneLogo,
-    backgroundColor: "#ffffff",
-    border: "1px solid black",
+    name: "(P)rind",
+    url: "https://www.eatprind.com",
+    logo: prind,
+    backgroundColor: "#ff9a00",
+    border: "0px solid black",
   },
   {
     name: "UChicagogenie",

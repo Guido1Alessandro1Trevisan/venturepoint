@@ -11,7 +11,7 @@ import lynkrLogo from "@/public/lynkrlogo.png";
 import caspermasterLogo from "@/public/caspermasterlogo.svg";
 import uchicagogenie from "@/public/uchicagogenie.png";
 import docusurferLogo from '@/public/docusurferlogo.png'
-import easyfinetuneLogo from '@/public/easyfinetunelogo.png'
+import prind from '@/public/prind.png'
 
 const portfolioItems = [
   {
@@ -19,7 +19,7 @@ const portfolioItems = [
     description: "Language learning needs to be adaptable in today's fast-paced world. Readably reduces the inefficiencies of fixed curricula by offering a fully personalized, AI-powered platform where learners select their own vocabulary and grammar. By tailoring exercises and using advanced spaced repetition algorithms, Readably improves retention and accelerates progress. Users learn 3x faster with higher engagement by focusing on what matters most to them, leveraging Readably's flexible approach to language learning.",
     image: readablyLogo,
     link: "https://readably.io/en",
-    founded: "2020",
+    founded: "2021",
     industry: "AI & Education",
     showLink: true
   },
@@ -37,17 +37,17 @@ const portfolioItems = [
     description: "With over 10,000 queries in just 7 days and 1.8k unique undergraduate visitors, UChicago Genie is your personal companion, ready to answer questions about professors and course feedback, the core curriculum, majors, degree paths, course requirements, content, and schedules for undergraduate classes—without any hallucinations. At most, it may only be unhelpful.",
     image: uchicagogenie,
     link: "https://uchicagogenie.com/",
-    founded: "2022",
+    founded: "2024",
     industry: "Education Technology",
     showLink: true
   },
   {
-    title: "Easyfinetune",
-    description: "High-quality data is the key to building successful language models. Easyfinetune simplifies this process by offering curated, custom datasets designed to meet your specific needs. Whether you're working with GPT, Llama, or other models, Easyfinetune provides human curated datasets for fine-tuning, tailored to your requirements. Focus on building your model while we handle the data—quickly, efficiently, and with precision.",
-    image: easyfinetuneLogo,
-    link: "https://easyfinetune.com/",
-    founded: "2023",
-    industry: "AI & Data",
+    title: "Prind",
+    description: "(P)rind repurposes parmesan rinds—an often overlooked byproduct—into a delicious, nutritious, and sustainable snack. Packed with high-quality protein, vitamins, and minerals, (P)rind offers a convenient, healthy option for busy, health-conscious individuals. Whether you're fueling up post-workout or simply enjoying a tasty bite on the go, (P)rind has you covered! .",
+    image: prind,
+    link: "https://www.eatprind.com",
+    founded: "2024",
+    industry: "Food and Beverage Retail",
     showLink: true
   },
   {
