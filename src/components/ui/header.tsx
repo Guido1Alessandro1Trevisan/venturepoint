@@ -27,13 +27,13 @@ export default function Header() {
                 </div>
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex gap-6 md:gap-10">
-                    <Link href="#portfolio" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
+                    <Link href="/#portfolio" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
                         Portfolio
                     </Link>
-                    <Link href="#approach" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
+                    <Link href="/#approach" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
                         Approach
                     </Link>
-                    <Link href="#leaders" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
+                    <Link href="/#leaders" className="text-sm md:text-lg font-medium hover:underline underline-offset-4">
                         People
                     </Link>
                     <button onClick={handleContactClick} className="text-sm md:text-lg font-medium hover:underline underline-offset-4">

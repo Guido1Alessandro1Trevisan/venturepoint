@@ -193,11 +193,11 @@ export default function VenturePointLanding() {
                 },
                 { 
                   "title": "Product Lead", 
-                  "description": "We take a small equity stake  and collaborate with non-technical founders from prestigious universities like UChicago, Harvard, Cornell, and UCL where we take on the role of product lead." 
+                  "description": "We take a small equity stake  and collaborate with non-technical founders where we take on the role of product lead." 
                 },
                 { 
                   "title": "Corporate Support", 
-                  "description": "We  partner with experts from top institutions to gain valuable market insights and accelerate our growth trajectory." 
+                  "description": "We partner with experts from top institutions to gain valuable market insights and accelerate our growth trajectory." 
                 }
               ].map((item, index, array) => (
                 <div key={index} className="w-full max-w-2xl">
