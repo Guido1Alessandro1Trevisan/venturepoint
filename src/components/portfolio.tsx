@@ -19,7 +19,7 @@ const portfolioItems = [
     description: "Language learning needs to be adaptable in today's fast-paced world. Readably reduces the inefficiencies of fixed curricula by offering a fully personalized, AI-powered platform where learners select their own vocabulary and grammar. By tailoring exercises and using advanced spaced repetition algorithms, Readably improves retention and accelerates progress. Users learn 3x faster with higher engagement by focusing on what matters most to them, leveraging Readably's flexible approach to language learning.",
     image: readablyLogo,
     link: "https://readably.io/en",
-    founded: "2021",
+    founded: "2023",
     industry: "AI & Education",
     showLink: true
   },
@@ -52,7 +52,7 @@ const portfolioItems = [
   },
   {
     title: "Caspermaster",
-    description: "CasperMaster.ai breaks down key competencies like classifying, diagnosing, and treating scenarios, offering detailed insights to help you excel. With rubric-based feedback and sentiment analysis, you'll learn to maintain a neutral tone while improving your overall performance. Whether you're aiming to meet or exceed expectations, CasperMaster.ai gives you the tools to maximize your results and prepare with confidence for this crucial exam.",
+    description: "With over 5000 monthly users, caspermaster.ai helps medical school applicants around the world to prepare for the Casper Exam, an admissions test which evaluates emotional intelligence through responses to ambiguous, realistic scenarios presented via text and video. Caspermaster.ai uses sentiment analysis to provide feedback to students preparing for their Casper exam, helping them improve their performance.",
     image: caspermasterLogo,
     link: "https://caspermaster.ai/",
     founded: "2023",
@@ -103,11 +103,10 @@ export function PortfolioComponent() {
               className="absolute top-2 right-2 z-10"
             >
               <Button 
-                variant="outline" 
+
                 className="flex items-center bg-white hover:bg-gray-200 transition-colors duration-200"
               >
-                Visit Website
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <ExternalLink className="h-4 w-4" />
               </Button>
             </Link>
           )}
@@ -122,8 +121,8 @@ export function PortfolioComponent() {
           <CardContent className="p-6">
             <CardTitle className="text-2xl font-serif mb-2">{item.title}</CardTitle>
             <div className="flex justify-between text-sm text-gray-600 mb-4">
-              <p>Founded: {item.founded}</p>
-              <p>Industry: {item.industry}</p>
+              <p>{item.founded}</p>
+              <p>{item.industry}</p>
             </div>
             <p className="text-muted-foreground mb-4">
               {expandedItems[item.title] 
