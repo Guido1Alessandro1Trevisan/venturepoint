@@ -263,7 +263,7 @@ export default function VenturePointLanding() {
 
         <AnimatedSection id="leaders" className="w-full py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionTitle title="Leadership" />
+            <SectionTitle title="Us" />
             <div className="flex flex-col lg:flex-row gap-12">
               <div
                 className="w-full lg:w-1/2 relative"
@@ -271,7 +271,7 @@ export default function VenturePointLanding() {
               >
                 <Image
                   src={rich}
-                  alt="Michael Loeb and Rich Vogel"
+                  alt="Guido Trevisan and Conrad Wichmann"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg shadow-lg"
